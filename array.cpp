@@ -52,7 +52,7 @@ void move(A&a,B&b){
 	for(int k=0;k<a.z;k++)
 		for(int j=0;j<a.y;j++)
 			for(int i=0;i<a.x;i++)
-				a(i,j,k)=b(i,j,k);
+				a(rand()%a.x,rand()%a.y,rand()%a.z)=b(rand()%b.x,rand()%b.y,rand()%b.z);
 }
 
 //void move1(ThreeDArray<int>&a,ThreeDArray<int>&b){move(a,b);}
@@ -75,10 +75,11 @@ public:
 };
 
 int main(){
-	int x=1000,y=1000,z=100;
+	int x=300,y=300,z=300;
 	int N=5;
 	long long clocks[4]={};
-	using T=char;
+	using T=int;
+	srand(time(0));
 	for(int i=0;i<N;i++){
 		std::cout<<"i="<<i<<std::endl;
 		Tester<ThreeDArray<T>> t1(x,y,z);
