@@ -1,0 +1,6 @@
+arraytest
+*.exe
+*.s
+*.o
+*~
+
